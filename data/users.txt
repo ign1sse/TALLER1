@@ -1,0 +1,16 @@
+admin,1234,35,admin@email.com,1
+kid1,abc,10,,0
+kid2,def,11,,0
+kid3,ghi,9,,0
+kid4,jkl,12,,0
+user1,5678,25,user1@email.com,0
+user2,9012,30,user2@email.com,0
+user3,3456,28,user3@email.com,0
+user4,7890,32,user4@email.com,0
+user5,1234,27,user5@email.com,0
+user6,5678,29,user6@email.com,0
+user7,9012,31,user7@email.com,0
+user8,3456,26,user8@email.com,0
+user9,7890,33,user9@email.com,0
+user10,1234,34,user10@email.com,0
+eltilininsano,adios123,11,eltilininsano@gmail.com,0
