@@ -1,39 +1,39 @@
-Google Chrome, Google, 3, 0, 1
-Mozilla Firefox, Mozilla, 3, 0, 1
-Call of Duty: Modern Warfare, Infinity Ward, 18, 59.99, 2, FPS
-Doom Eternal, id Software, 18, 49.99, 2, FPS
-World of Warcraft, Blizzard Entertainment, 12, 14.99, 2, MMO
-Final Fantasy XIV, Square Enix, 16, 12.99, 2, MMO
-Portal 2, Valve, 10, 9.99, 2, PUZZLE
-The Witness, Thekla Inc., 10, 19.99, 2, PUZZLE
-The Witcher 3: Wild Hunt, CD Projekt Red, 18, 39.99, 2, RPG
-Skyrim, Bethesda Game Studios, 18, 29.99, 2, RPG
-The Sims 4, Maxis, 12, 39.99, 2, SIMULATION
-Cities: Skylines, Colossal Order, 10, 29.99, 2, SIMULATION
-Uncharted 4: A Thief's End, Naughty Dog, 16, 19.99, 2, ADVENTURE
-Tomb Raider, Crystal Dynamics, 18, 19.99, 2, ADVENTURE
-Grand Theft Auto V, Rockstar Games, 18, 29.99, 2, ACTION
-Red Dead Redemption 2, Rockstar Games, 18, 59.99, 2, ACTION
-Civilization VI, Firaxis Games, 12, 59.99, 2, STRATEGY
-StarCraft II, Blizzard Entertainment, 16, 19.99, 2, STRATEGY
-FIFA 23, EA Sports, 3, 69.99, 2, SPORTS
-NBA 2K23, Visual Concepts, 3, 69.99, 2, SPORTS
-Forza Horizon 5, Playground Games, 3, 69.99, 2, RACING
-Need for Speed: Heat, Ghost Games, 16, 59.99, 2, RACING
-Microsoft Office, Microsoft, 3, 69.99, 3
-LibreOffice, The Document Foundation, 3, 0, 3
-Google Workspace, Google, 3, 4.68, 3
-WPS Office, Kingsoft, 3, 29.99, 3
-iWork, Apple, 3, 0, 3
-Adobe Photoshop, Adobe, 3, 20.99, 4, Fotos
-FL Studio, Image-Line, 3, 199.00, 4, Musica
-OBS, OBS Project, 3, 0, 4, Streaming
-Premiere Pro, Adobe, 3, 20.99, 4, Video
-Kaspersky Anti-Virus, Kaspersky, 3, 29.99, 5, Ransomware
-NordVPN, NordVPN, 3, 3.71, 5, Spyware
-BitLocker, Microsoft, 3, 0, 5, Botnets
-Malwarebytes, Malwarebytes, 3, 39.99, 5, Rootkits
-CCleaner, Piriform, 3, 24.95, 5, Gusanos
-LastPass, LogMeIn, 3, 3.00, 5, Troyanos
-Facebook, Facebook, 13, 0, 6
-Twitter, Twitter, 18, 0, 6
+Google Chrome,Google,3,0,1
+Mozilla Firefox,Mozilla,3,0,1
+Call of Duty: Modern Warfare,Infinity Ward,18,59.99,2,FPS
+Doom Eternal,id Software,18,49.99,2,FPS
+World of Warcraft,Blizzard Entertainment,12,14.99,2,MMO
+Final Fantasy XIV,Square Enix,16,12.99,2,MMO
+Portal 2,Valve,10,9.99,2,PUZZLE
+The Witness,Thekla Inc.,10,19.99,2,PUZZLE
+The Witcher 3: Wild Hunt,CD Projekt Red,18,39.99,2,RPG
+Skyrim,Bethesda Game Studios,18,29.99,2,RPG
+The Sims 4,Maxis,12,39.99,2,SIMULATION
+Cities: Skylines,Colossal Order,10,29.99,2,SIMULATION
+Uncharted 4: A Thief's End,Naughty Dog,16,19.99,2,ADVENTURE
+Tomb Raider,Crystal Dynamics,18,19.99,2,ADVENTURE
+Grand Theft Auto V,Rockstar Games,18,29.99,2,ACTION
+Red Dead Redemption 2,Rockstar Games,18,59.99,2,ACTION
+Civilization VI,Firaxis Games,12,59.99,2,STRATEGY
+StarCraft II,Blizzard Entertainment,16,19.99,2,STRATEGY
+FIFA 23,EA Sports,3,69.99,2,SPORTS
+NBA 2K23,Visual Concepts,3,69.99,2,SPORTS
+Forza Horizon 5,Playground Games,3,69.99,2,RACING
+Need for Speed: Heat,Ghost Games,16,59.99,2,RACING
+Microsoft Office,Microsoft,3,69.99,3
+LibreOffice,The Document Foundation,3,0,3
+Google Workspace,Google,3,4.68,3
+WPS Office,Kingsoft,3,29.99,3
+iWork,Apple,3,0,3
+Adobe Photoshop,Adobe,3,20.99,4,Fotos
+FL Studio,Image-Line,3,199,4,Musica
+OBS,OBS Project,3,0,4,Streaming
+Premiere Pro,Adobe,3,20.99,4,Video
+Kaspersky Anti-Virus,Kaspersky,3,29.99,5,Ransomware
+NordVPN,NordVPN,3,3.71,5,Spyware
+BitLocker,Microsoft,3,0,5,Botnets
+Malwarebytes,Malwarebytes,3,39.99,5,Rootkits
+CCleaner,Piriform,3,24.95,5,Gusanos
+LastPass,LogMeIn,3,3,5,Troyanos
+Facebook,Facebook,13,0,6
+Twitter,Twitter,18,0,6

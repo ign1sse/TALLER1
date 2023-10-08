@@ -9,7 +9,8 @@ Este es un programa que permite gestionar una biblioteca personal de software. E
 Para ejecutar este programa se necesita tener instalado el compilador de C++ y el editor de código de su preferencia. Los pasos son los siguientes:
 
 - Clonar o descargar el repositorio de GitHub donde se encuentra el código fuente del programa.
-- Abrir la terminal y ejecutar el siguiente comando: g++ -o main.exe main.cpp
+- Abrir la terminal y ejecutar el siguiente comando:
+g++ -o main.exe main.cpp src/Object.cpp src/Node.cpp src/List.cpp src/Software.cpp src/User.cpp src/Softwares/Browser.cpp src/Softwares/Game.cpp src/Softwares/OfficeAutomation.cpp src/Softwares/Production.cpp src/Softwares/Security.cpp src/Softwares/Social.cpp
 - Ejecutar el archivo 'main.exe' generado por el compilador.
 
 ## Uso

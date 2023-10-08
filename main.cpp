@@ -3,15 +3,15 @@
 #include <sstream> // Para usar istringstream y getline
 #include <vector> // Para usar vector
 #include <string> // Para usar string
-#include "functions.h" // Para usar las funciones propias
-#include "User.h" // Para usar la clase User
-#include "Software.h" // Para usar la clase Software
-#include "Softwares/Browser.h" // Para usar la clase Browser
-#include "Softwares/Game.h" // Para usar la clase Game
-#include "Softwares/OfficeAutomation.h" // Para usar la clase OfficeAutomation
-#include "Softwares/Production.h" // Para usar la clase Production
-#include "Softwares/Security.h" // Para usar la clase Security
-#include "Softwares/Social.h" // Para usar la clase Social
+#include "include/functions.h" // Para usar las funciones propias
+#include "include/User.h" // Para usar la clase User
+#include "include/Software.h" // Para usar la clase Software
+#include "include/Softwares/Browser.h" // Para usar la clase Browser
+#include "include/Softwares/Game.h" // Para usar la clase Game
+#include "include/Softwares/OfficeAutomation.h" // Para usar la clase OfficeAutomation
+#include "include/Softwares/Production.h" // Para usar la clase Production
+#include "include/Softwares/Security.h" // Para usar la clase Security
+#include "include/Softwares/Social.h" // Para usar la clase Social
 
 using namespace std;
 
@@ -19,6 +19,7 @@ int main() {
     // Creamos las listas de usuarios y softwares
     List* users = new List();
     List* softwares = new List();
+    List* myLibrary = new List();
     // Poblamos la base de datos con los datos contenidos en la carpeta "data"
     readUsers(users);
     readSoftwares(softwares);
@@ -127,9 +128,9 @@ int main() {
                 case 1: {
                     // Mostramos los softwares que tiene el usuario
                     cout << "\nMy library:" << endl;
-                    for (int i = 0; i < softwares->getSize(); i++) {
+                    for (int i = 0; i < myLibrary->getSize(); i++) {
                         // Usamos casteo dinámico para verificar el tipo de software
-                        Software* software = dynamic_cast<Software*>(softwares->get(i));
+                        Software* software = dynamic_cast<Software*>(myLibrary->get(i));
                         if (software != NULL && software->getUsers()->find(currentUser) != -1) {
                             cout << "  " << i + 1 << ") " << software->getName();
                             cout << " (" << software->getAgeRating() << "+)" << endl;
@@ -141,7 +142,7 @@ int main() {
                     int selection;
                     cin >> selection;
                     // Validamos la selección
-                    if (selection < 0 || selection > softwares->getSize()+1) {
+                    if (selection < 0 || selection > myLibrary->getSize()+1) {
                         cout << "\nInvalid selection" << endl;
                         break;
                     }
@@ -149,7 +150,7 @@ int main() {
                         break;
                     }
                     // Obtenemos el software seleccionado
-                    Software* software = dynamic_cast<Software*>(softwares->get(selection-1));
+                    Software* software = dynamic_cast<Software*>(myLibrary->get(selection-1));
                     if (software == NULL) {
                         cout << "\nInvalid selection" << endl;
                         break;
@@ -161,6 +162,7 @@ int main() {
                     }
                     // Le preguntamos al usuario si quiere eliminar el software o mostrar información
                     cout << "\nWhat do you want to do with this software?" << endl;
+                    cout << "0) Back" << endl;
                     cout << "1) Delete software" << endl;
                     cout << "2) Show information" << endl;
                     cout << "3) Use software" << endl;
@@ -168,6 +170,8 @@ int main() {
                     int option2;
                     cin >> option2;
                     switch (option2) {
+                        case 0:
+                            break;
                         case 1:
                             // Eliminamos el usuario de la lista de usuarios del software
                             software->removeUser(currentUser);
@@ -249,6 +253,17 @@ int main() {
                                     officeAutomation->addFile();
                                     cout << "\nFile added successfully" << endl;
                                 }
+                                // Le preguntamos al usuario si quiere eliminar un archivo
+                                cout << "\nDo you want to delete a file?" << endl;
+                                cout << "1) Yes" << endl;
+                                cout << "2) No" << endl;
+                                cout << "Select an option: ";
+                                cin >> option3;
+                                if (option3 == 1) {
+                                    // Eliminamos el archivo
+                                    officeAutomation->removeFile();
+                                    cout << "\nFile deleted successfully" << endl;
+                                }
                                 break;
                             }
                             Social* social = dynamic_cast<Social*>(software);
@@ -265,10 +280,12 @@ int main() {
                                     cout << "\nFriend: ";
                                     string friendName;
                                     cin >> friendName;
+                                    bool found = false;
                                     // Buscamos el amigo en la lista de usuarios
                                     for (int i = 0; i < users->getSize(); i++) {
                                         User* user = dynamic_cast<User*>(users->get(i));
                                         if (user != NULL && user->getName() == friendName) {
+                                            found = true;
                                             // Agregamos el amigo a la lista de amigos
                                             social->addFriend(user);
                                             cout << "\nFriend added successfully" << endl;
@@ -276,7 +293,9 @@ int main() {
                                         }
                                     }
                                     // Si no encontramos al amigo, mostramos un mensaje de error
-                                    cout << "\nFriend not found" << endl;
+                                    if (!found) {
+                                        cout << "\nFriend not found" << endl;
+                                    }
                                 }
                                 break;
                             }
@@ -376,8 +395,9 @@ int main() {
 
                     // Le preguntamos al usuario si quiere agregar el software a su biblioteca,
                     // mostrar su información o borrarlo del sistema
-
-                    cout << "\nWhat do you want to do with this software?" << endl;
+                    cout << "\nSoftware selected: " << software->getName() << endl;
+                    cout << "What do you want to do with this software?" << endl;
+                    cout << "0) Back" << endl;
                     cout << "1) Add software to my library" << endl;
                     cout << "2) Show information" << endl;
                     cout << "3) Delete software from system" << endl;
@@ -386,6 +406,8 @@ int main() {
                     cin >> option2;
 
                     switch (option2) {
+                        case 0:
+                            break;
                         case 1:
                             // Verificamos si el usuario ya tiene el software usando la función
                             // find de la lista
@@ -395,6 +417,8 @@ int main() {
                             }
                             // Agregamos el usuario a la lista de usuarios del software
                             software->addUser(currentUser);
+                            // Agregamos el software a la biblioteca del usuario
+                            myLibrary->add(software);
                             cout << "\nSoftware added successfully" << endl;
                             // Guardamos el log
                             log.push_back("The user: "+currentUser->getName()+", added the software: "+software->getName());
@@ -433,6 +457,10 @@ int main() {
                             // lo eliminamos del sistema
                             if (!inLibrary) {
                                 softwares->remove(software);
+                                // Si el software está en la biblioteca del usuario, lo eliminamos también
+                                if (software->getUsers()->find(currentUser) != -1) {
+                                    myLibrary->remove(software);
+                                }
                                 cout << "\nSoftware deleted successfully" << endl;
                                 break;
                             }
@@ -449,6 +477,8 @@ int main() {
                             if (option3 == 1) {
                                 // Eliminamos el usuario de la lista de usuarios del software
                                 software->removeUser(currentUser);
+                                // Eliminamos el software de la biblioteca del usuario
+                                myLibrary->remove(software);
                                 cout << "\nSoftware deleted successfully" << endl;
                             }
                             // Guardamos el log

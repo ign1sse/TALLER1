@@ -9,13 +9,3 @@ class Object {
         ~Object();
         virtual void print() = 0;
 };
-
-// Constructor
-Object::Object() {
-
-};
-
-// Destructor
-Object::~Object() {
-
-};

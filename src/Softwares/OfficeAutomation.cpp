@@ -1,21 +1,5 @@
-#pragma once
-#include <iostream>
-#include "../Software.h"
-
-using namespace std;
-
-class OfficeAutomation: public Software {
-    private:
-        int files; // Number of files created by the users
-    public:
-        OfficeAutomation();
-        ~OfficeAutomation();
-        int getFiles();
-        void setFiles(int);
-        void addFile();
-        void removeFile();
-        void print();
-};
+#include "../../include/Softwares/OfficeAutomation.h"
+#include "../../include/Software.h"
 
 // Constructor
 OfficeAutomation::OfficeAutomation() {
@@ -43,6 +27,11 @@ void OfficeAutomation::addFile() {
 };
 
 void OfficeAutomation::removeFile() {
+    // Check if there are files to remove
+    if (this->files == 0) {
+        cout << "There are no files to remove" << endl;
+        return;
+    }
     this->files--;
 };
 

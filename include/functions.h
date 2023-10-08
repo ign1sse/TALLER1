@@ -14,6 +14,8 @@
 #include "Softwares/Security.h" // Para usar la clase Security
 #include "Softwares/Social.h" // Para usar la clase Social
 
+using namespace std;
+
 // Función split que separa una cadena por un delimitador
 vector<string> split(string s, char delimiter) {
     vector<string> tokens; // Vector que almacena las subcadenas
